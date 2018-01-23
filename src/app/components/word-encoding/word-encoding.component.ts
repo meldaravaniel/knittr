@@ -17,7 +17,6 @@ export class WordEncodingComponent {
 		this.encodeWord(word);
 	}
 
-
 	encoding = [[], [], [], [], [], [], [], []];
 	charNumbers: number[] = [];
 	indivCharNumbers: number[] = [];
@@ -34,7 +33,7 @@ export class WordEncodingComponent {
 		this.splitCharNumbers();
 	}
 
-	private encodeBase10(word: string): number[] {
+	public encodeBase10(word: string): number[] {
 		const result = [];
 		for (let i = 0; i < word.length; i++) {
 			result[i] = parseInt(word.charAt(i), 36) - 9;
@@ -42,7 +41,7 @@ export class WordEncodingComponent {
 		return result;
 	}
 
-	private encodeBase(base: number, base10: number[]): number[] {
+	public encodeBase(base: number, base10: number[]): number[] {
 		const result = [];
 		for (let i = 0; i < base10.length; i++) {
 			let curr = base10[i];
