@@ -15,6 +15,19 @@ Baby steps. :3
 * Encodes into binary and bases 3 - 10 using 1-26 as the numbers for each letter.
 * Case insensitive.
 
+## TODO
+
+- [X] encode words into bases 2 - 10, show the numbers.
+- [ ] validate extraneous input (only allow English alpha characters for now.
+- [ ] store word encodings in local storage
+- [ ] allow user to see words in their local storage
+- [ ] highlight or count the zeros in each base's encodings
+- [ ] allow clicking on a base's encoding, take to a grid page
+- [ ] The Grid *cue Daft Punk*, but all out in one long line, representing the stitches
+- [ ] provide 2D grid configurations of N stitchs wide and as many tall as need be to accomodate all the stitches (start with just an add/remove column clicky thing
+- [ ] pad the grid with blank stitches if they don't evenly divide into the area of the grid.
+- [ ] make the grid drag-able
+
 # Development
 
 ## Required software
