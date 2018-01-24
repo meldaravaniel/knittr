@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
+# Release Notes
+
+## [Current Release](https://meldaravaniel.github.io/knittr)
+
+* Defaults the word to 'knitter' (mostly so I don't have to type something in every time while testing).
+* Alerts when clicking "Let's Knit!" button, but no ability to save yet, so kind of a forward-looking feature.
+* Encodes into binary and bases 3 - 10 using 1-26 as the numbers for each letter.
+* Case insensitive.
+
+# Development
+
 ## Required software
 
 > Verify that you are running at least node 6.9.x and npm 3.x.x by running `node -v` and `npm -v` in a terminal/console window. Older versions produce errors, but newer versions are fine.
@@ -25,7 +36,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Production Build
+## Production Build to Gh Pages
 
 Need to have installed gh-pages: `npm install -g gh-pages`
 Build it: `ng build --prod --base-href "knittr/"` (name of the repo should be the base-href) 
