@@ -56,7 +56,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Production Build to Gh Pages
 
 Need to have installed gh-pages: `npm install -g gh-pages`
-Build it: `ng build --prod --base-href "knittr/"` (name of the repo should be the base-href) 
+Build it: `ng build --prod` (don't need to add a base-href to this, it's already on the URL. 
 Deploy the dist folder `ng build --prod` created to gh-pages: `gh-pages -d dist`
 
 ## Running unit tests
