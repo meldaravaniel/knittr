@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
-This baby webapp is has dreams of being a fully-functioning knitting pattern generator based on methods outlined by [Naomi Parkhurst](https://gannetdesigns.com/tag/secret-code-rewrite/).  All the characters in a given word are converted to numbers in bases 2 through 10 (don't care to get into more letters for bases higher than that) and then mapped onto a grid to create a pattern (could be lace, aran, cables...).  Ultimately, I would like it to go so far as to make the grid and allow you to tweak it until you like it, then add in knitting symbols.
+This baby webapp has dreams of being a fully-functioning knitting pattern generator based on methods outlined by [Naomi Parkhurst](https://gannetdesigns.com/tag/secret-code-rewrite/).  All the characters in a given word are converted to numbers in bases 2 through 10 (don't care to get into more letters for bases higher than that) and then mapped onto a grid to create a pattern (could be lace, aran, cables...).  Ultimately, I would like it to go so far as to make the grid and allow you to tweak it until you like it, then add in knitting symbols.
 
 Baby steps. :3
 
