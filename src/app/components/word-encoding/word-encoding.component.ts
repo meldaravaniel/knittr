@@ -4,9 +4,9 @@ import { Component, Input } from '@angular/core';
 	selector: 'app-word-encoding',
 	template: `
 	<div [hidden]="!encoding">
-		<div *ngFor="let base of encoding; index as i">
-			Base {{i+2}}: <span *ngFor="let arr of base">{{arr}} </span>
-		</div>
+	<div *ngFor="let base of encoding; index as i">
+	Base {{i+2}}: <span *ngFor="let arr of base">{{arr}} </span>
+	</div>
 	</div>`,
 	styleUrls: ['./word-encoding.component.css']
 })
@@ -27,7 +27,7 @@ export class WordEncodingComponent {
 		const base10 = this.encodeBase10(userWord);
 		this.encoding[8] = base10;
 		for (let i = 2; i < 10; i++) {
-			this.encoding[i - 2] = this.encodeBase(i, base10);
+			this.encoding[i - 2] = this.encodeBase(i, userWord);
 		}
 
 		this.splitCharNumbers();
@@ -41,17 +41,32 @@ export class WordEncodingComponent {
 		return result;
 	}
 
-	public encodeBase(base: number, base10: number[]): number[] {
+	public encodeBase(base: number, word: string): number[] {
+		let base10 = this.encodeBase10(word);
 		const result = [];
 		for (let i = 0; i < base10.length; i++) {
-			let curr = base10[i];
-			let res = 0;
-			while (curr > 0) {
-				const remainder = curr % base;
-				curr = (curr - remainder) / base;
-				res = this.decimalToBase(remainder) + res;
-			}
-			result[i] = res;
+			let toEncode = base10[i];
+			result[i] = this.encode(toEncode, base, 1, 0);
+		}
+		return result;
+	}
+
+	private encode(toEncode: number, base: number,
+		power: number, result: number): number {
+		let place = Math.pow(base, power);
+		let mod = toEncode % place;
+		if (mod >= base) {
+			result = this.encode(mod, base, power - 1, result);
+		} else {
+			result += Math.pow(10, power - 1) * mod;
+		}
+		
+		toEncode -= mod;
+		let divided = toEncode / place;
+		if (divided >= place || divided >= base) {
+			result = this.encode(toEncode, base, power + 1, result);
+		} else {
+			result += Math.pow(10, power) * divided;
 		}
 		return result;
 	}
