@@ -18,6 +18,7 @@ Baby steps. :3
 ## TODO
 
 - [X] encode words into bases 2 - 10, show the numbers.
+- [ ] add some css to make it prettier (ng-material?)
 - [ ] validate extraneous input (only allow English alpha characters for now.
 - [ ] store word encodings in local storage
 - [ ] allow user to see words in their local storage
