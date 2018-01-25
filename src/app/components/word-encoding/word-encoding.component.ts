@@ -3,11 +3,23 @@ import {Component, Input} from '@angular/core';
 @Component({
   selector: 'app-word-encoding',
   template: `
-    <div class="row">
-      <div [hidden]="!encoding">
-        <div *ngFor="let base of encoding; index as i">
-          Base {{i + 2}}: <span *ngFor="let arr of base">{{arr}} </span>
-        </div>
+    <div class="row" [hidden]="!userWord">
+      <div class="table-responsive">
+        <table>
+          <thead>
+          <tr>
+            <th></th>
+            <th *ngFor="let ch of userWord.split('')">{{ ch }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let base of encoding; index as i">
+            <td class="bases">{{ i + 2 }}</td>
+            <td class="numbers"
+                *ngFor="let arr of base">{{ arr }}</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>`,
   styleUrls: ['./word-encoding.component.css']
@@ -16,9 +28,11 @@ export class WordEncodingComponent {
 
   @Input()
   set word(word: string) {
+    this.userWord = word;
     this.encodeWord(word);
   }
 
+  userWord: string;
   encoding = [[], [], [], [], [], [], [], []];
   charNumbers: number[] = [];
   indivCharNumbers: number[] = [];

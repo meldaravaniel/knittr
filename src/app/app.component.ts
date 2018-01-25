@@ -4,7 +4,6 @@ import {Component} from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="container">
-      Parent: {{ word }}
       <app-word-form (change)="wordChange($event)"></app-word-form>
       <app-word-encoding [word]="word"></app-word-encoding>
     </div>`,
