@@ -1,24 +1,25 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
-	selector: 'app-root',
-	template: `
-	<div>
-	Parent: {{ word }}
-	<app-word-form (change)="wordChange($event)"></app-word-form>
-	<app-word-encoding [word]="word"></app-word-encoding>
-	</div>`,
-	styleUrls: ['./app.component.css']
+  selector: 'app-root',
+  template: `
+    <div class="container">
+      Parent: {{ word }}
+      <app-word-form (change)="wordChange($event)"></app-word-form>
+      <app-word-encoding [word]="word"></app-word-encoding>
+    </div>`,
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
 
-	word = 'knitter';
+  word = 'knitter';
 
-	constructor() {}
+  constructor() {
+  }
 
-	wordChange(event) {
-		this.word = event;
-	}
+  wordChange(event) {
+    this.word = event;
+  }
 
 }
