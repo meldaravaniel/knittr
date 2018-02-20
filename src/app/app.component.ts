@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {BASES} from './constants/constants';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,14 @@ import {Component} from '@angular/core';
 
 export class AppComponent {
 
-  word = 'knitter';
+  public bases = BASES;
+  public word;
 
   constructor() {
+    if (!this.word) {
+      this.word = 'knitter';
+      // this.wordChange('knitter');
+    }
   }
 
   wordChange(event) {

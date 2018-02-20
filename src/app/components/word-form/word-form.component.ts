@@ -31,12 +31,12 @@ export class WordFormComponent {
   }
 
   onSubmit() {
-    const result = confirm('Are you sure you want to proceed?  This will erase all progress.');
-    if (result) {
+    // const result = confirm('Are you sure you want to proceed?  This will erase all progress.');
+    // if (result) {
       console.log(this.form);
       this.change.emit(this.form.controls.word.value);
       this.form.reset();
-    }
+    // }
   }
 
 }

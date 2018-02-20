@@ -19,6 +19,7 @@ Baby steps. :3
 
 - [X] encode words into bases 2 - 10, show the numbers.
 - [ ] add some css to make it prettier (ng-material?)
+- [ ] add a radio button to allow you to choose show/hide padding zeroes
 - [ ] validate extraneous input (only allow English alpha characters for now.
 - [ ] store word encodings in local storage
 - [ ] allow user to see words in their local storage
