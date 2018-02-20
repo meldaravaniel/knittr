@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
-This baby webapp is has dreams of being a fully-functioning knitting pattern generator based on methods outlined by [Naomi Parkhurst](https://gannetdesigns.com/tag/secret-code-rewrite/).  All the characters in a given word are converted to numbers in bases 2 through 10 (don't care to get into more letters for bases higher than that) and then mapped onto a grid to create a pattern (could be lace, aran, cables...).  Ultimately, I would like it to go so far as to make the grid and allow you to tweak it until you like it, then add in knitting symbols.
+This baby webapp has dreams of being a fully-functioning knitting pattern generator based on methods outlined by [Naomi Parkhurst](https://gannetdesigns.com/tag/secret-code-rewrite/).  All the characters in a given word are converted to numbers in bases 2 through 10 (don't care to get into more letters for bases higher than that) and then mapped onto a grid to create a pattern (could be lace, aran, cables...).  Ultimately, I would like it to go so far as to make the grid and allow you to tweak it until you like it, then add in knitting symbols.
 
 Baby steps. :3
 
@@ -14,6 +14,20 @@ Baby steps. :3
 * Alerts when clicking "Let's Knit!" button, but no ability to save yet, so kind of a forward-looking feature.
 * Encodes into binary and bases 3 - 10 using 1-26 as the numbers for each letter.
 * Case insensitive.
+
+## TODO
+
+- [X] encode words into bases 2 - 10, show the numbers.
+- [ ] add some css to make it prettier (ng-material?)
+- [ ] validate extraneous input (only allow English alpha characters for now.
+- [ ] store word encodings in local storage
+- [ ] allow user to see words in their local storage
+- [ ] highlight or count the zeros in each base's encodings
+- [ ] allow clicking on a base's encoding, take to a grid page
+- [ ] The Grid *cue Daft Punk*, but all out in one long line, representing the stitches
+- [ ] provide 2D grid configurations of N stitchs wide and as many tall as need be to accomodate all the stitches (start with just an add/remove column clicky thing
+- [ ] pad the grid with blank stitches if they don't evenly divide into the area of the grid.
+- [ ] make the grid drag-able
 
 # Development
 
@@ -43,7 +57,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Production Build to Gh Pages
 
 Need to have installed gh-pages: `npm install -g gh-pages`
-Build it: `ng build --prod --base-href "knittr/"` (name of the repo should be the base-href) 
+Build it: `ng build --prod` (don't need to add a base-href to this, it's already on the URL. 
 Deploy the dist folder `ng build --prod` created to gh-pages: `gh-pages -d dist`
 
 ## Running unit tests
