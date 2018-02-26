@@ -18,7 +18,7 @@ export class AppComponent {
 
   constructor() {
     if (!this.word) {
-      this.word = 'knitter';
+      this.word = 'knitterz';
       // this.wordChange('knitter');
     }
   }
