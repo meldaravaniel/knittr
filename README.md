@@ -10,6 +10,11 @@ Baby steps. :3
 
 ## [Current Release](https://meldaravaniel.github.io/knittr)
 
+* Defaults the word to 'knitterz'...because reasons
+* turned off the alert because it was annoying and there's no saved progress anyways.
+* added a checkbox that allows user to choose whether to use 'same length' digits for each encoded character; ie. pad with zeroes
+
+### Release 0.1
 * Defaults the word to 'knitter' (mostly so I don't have to type something in every time while testing).
 * Alerts when clicking "Let's Knit!" button, but no ability to save yet, so kind of a forward-looking feature.
 * Encodes into binary and bases 3 - 10 using 1-26 as the numbers for each letter.
@@ -58,7 +63,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Production Build to Gh Pages
 
 Need to have installed gh-pages: `npm install -g gh-pages`
-Build it: `ng build --prod` (don't need to add a base-href to this, it's already on the URL. 
+Build it: `ng build --prod --base-href ""` 
 Deploy the dist folder `ng build --prod` created to gh-pages: `gh-pages -d dist`
 
 ## Running unit tests
