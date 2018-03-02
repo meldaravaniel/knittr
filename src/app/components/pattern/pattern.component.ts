@@ -8,14 +8,12 @@ import {BASES} from '../../constants/constants';
       <input id="columnCount" type="number">
     </div>
     <div *ngFor="let base of bases">
+      <div>Base: {{base}}</div>
       <div *ngFor="let arr of patternGrids[base]">
         <span *ngFor="let stitch of arr">
           <app-stitch [stitch]="stitch"></app-stitch>
         </span>
       </div>
-      <!--<span *ngFor="let digit of digits">-->
-      <!--<app-stitch [stitch]="stitch"></app-stitch>-->
-      <!--</span>-->
     </div>
   `,
   styleUrls: ['./pattern.component.css']
@@ -25,14 +23,14 @@ export class PatternComponent {
   @Input()
   set encodings(encodings: { [key: number]: string[] }) {
     this.pattern = this.convertToStitches(encodings);
-    console.log(this.pattern);
     this.patternGrids = this.fillGrids(this.pattern);
+    console.log(this.patternGrids);
   }
 
   public bases: number[] = BASES;
   public pattern: { [key: number]: boolean[] };
   public patternGrids: { [key: number]: boolean[][] };
-  public columnCount = 1;
+  public columnCount = 5;
 
   constructor() {
   }
@@ -73,13 +71,17 @@ export class PatternComponent {
       const arr: boolean[][] = [];
       const pattern = patterns[base];
       let stitch = 0;
-      for (let row = (pattern.length - 1) / this.columnCount; row >= 0; row--) {
+      for (let row = Math.floor((pattern.length - 1) / this.columnCount); row >= 0; row--) {
         for (let col = this.columnCount - 1; col >= 0; col--) {
           if (!arr[row]) {
             arr[row] = [];
           }
-          arr[row][this.columnCount] = pattern[stitch];
-          stitch ++;
+          console.log(`putting ${pattern[stitch]} at row ${row} and col ${col}`);
+          arr[row][col] = pattern[stitch];
+          stitch++;
+          if (stitch >= pattern.length) {
+            break;
+          }
         }
       }
       result[base] = arr;
