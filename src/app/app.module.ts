@@ -6,6 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { WordFormComponent } from './components/word-form/word-form.component';
 import { WordEncodingComponent } from './components/word-encoding/word-encoding.component';
+import { StitchComponent } from './components/stitch/stitch.component';
+import { PatternComponent } from './components/pattern/pattern.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { WordEncodingComponent } from './components/word-encoding/word-encoding.
   declarations: [
     AppComponent,
     WordFormComponent,
-    WordEncodingComponent
+    WordEncodingComponent,
+    StitchComponent,
+    PatternComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
