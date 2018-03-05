@@ -10,6 +10,11 @@ Baby steps. :3
 
 ## [Current Release](https://meldaravaniel.github.io/knittr)
 
+* adds grid and grid-sizing to the page to map the pattern
+* user can select how many columns are shown for each base
+* known issue: doesn't re-do the grids when ticking the checkbox for show/hide padding... :/
+
+### Release 0.2
 * Defaults the word to 'knitterz'...because reasons
 * turned off the alert because it was annoying and there's no saved progress anyways.
 * added a checkbox that allows user to choose whether to use 'same length' digits for each encoded character; ie. pad with zeroes
