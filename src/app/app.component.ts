@@ -29,6 +29,7 @@ export class AppComponent {
   }
 
   encodingsChanged(event) {
+    console.log('encodings changed');
     this.encodings = event;
   }
 

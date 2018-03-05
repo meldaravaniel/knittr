@@ -77,24 +77,6 @@ export class WordEncodingComponent {
     return result;
   }
 
-  // private encode(digit: number, base: number, power: number, result: number): number {
-  //   let place = Math.pow(base, power);
-  //   let mod = digit % place;
-  //   if (mod >= base) {
-  //     result = this.encode(mod, base, power - 1, result);
-  //   } else {
-  //     result += Math.pow(10, power - 1) * mod;
-  //   }
-  //   digit -= mod;
-  //   let divided = digit / place;
-  //   if (divided >= place || divided >= base) {
-  //     result = this.encode(digit, base, power + 1, result);
-  //   } else {
-  //     result += Math.pow(10, power) * divided;
-  //   }
-  //   return result;
-  // }
-
   public changePad() {
     if (this.padding) {
       this.padding = !this.padding;

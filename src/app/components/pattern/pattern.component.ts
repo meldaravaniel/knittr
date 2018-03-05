@@ -24,6 +24,9 @@ export class PatternComponent {
 
   @Input()
   set encodings(encodings: { [key: number]: string[] }) {
+    if (!encodings[this.bases[0]]){
+      return;
+    }
     this.patterns = this.convertToStitches(encodings);
     this.patternGrids = this.fillGrids();
   }
