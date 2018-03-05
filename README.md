@@ -10,6 +10,11 @@ Baby steps. :3
 
 ## [Current Release](https://meldaravaniel.github.io/knittr)
 
+* Defaults the word to 'knitterz'...because reasons
+* turned off the alert because it was annoying and there's no saved progress anyways.
+* added a checkbox that allows user to choose whether to use 'same length' digits for each encoded character; ie. pad with zeroes
+
+### Release 0.1
 * Defaults the word to 'knitter' (mostly so I don't have to type something in every time while testing).
 * Alerts when clicking "Let's Knit!" button, but no ability to save yet, so kind of a forward-looking feature.
 * Encodes into binary and bases 3 - 10 using 1-26 as the numbers for each letter.
@@ -19,15 +24,15 @@ Baby steps. :3
 
 - [X] encode words into bases 2 - 10, show the numbers.
 - [X] add a checkbox to allow you to choose show/hide padding zeroes
+- [X] The Grid *cue Daft Punk*, but all out in one long line, representing the stitches
+- [X] pad the grid with blank stitches if they don't evenly divide into the area of the grid.
+- [X] provide 2D grid configurations of N stitches wide and as many tall as need be to accommodate all the stitches ~~(start with just an add/remove column clicky thing?)~~
 - [ ] add some css to make it prettier (ng-material?)
 - [ ] validate extraneous input (only allow English alpha characters for now.
 - [ ] store word encodings in local storage
 - [ ] allow user to see words in their local storage
 - [ ] highlight or count the zeros in each base's encodings
 - [ ] allow clicking on a base's encoding, take to a grid page
-- [ ] The Grid *cue Daft Punk*, but all out in one long line, representing the stitches
-- [ ] provide 2D grid configurations of N stitchs wide and as many tall as need be to accomodate all the stitches (start with just an add/remove column clicky thing
-- [ ] pad the grid with blank stitches if they don't evenly divide into the area of the grid.
 - [ ] make the grid drag-able
 
 # Development
@@ -58,7 +63,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Production Build to Gh Pages
 
 Need to have installed gh-pages: `npm install -g gh-pages`
-Build it: `ng build --prod --base-href ""` (don't need to add a base-href to this, it's already on the URL. 
+Build it: `ng build --prod --base-href ""` 
 Deploy the dist folder `ng build --prod` created to gh-pages: `gh-pages -d dist`
 
 ## Running unit tests
