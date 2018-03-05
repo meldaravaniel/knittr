@@ -10,6 +10,9 @@ Baby steps. :3
 
 ## [Current Release](https://meldaravaniel.github.io/knittr)
 
+* fixes the show/hide padding bug...weirdly, but fixed...
+
+### Release 0.3
 * adds grid and grid-sizing to the page to map the pattern
 * user can select how many columns are shown for each base
 * known issue: doesn't re-do the grids when ticking the checkbox for show/hide padding... :/
