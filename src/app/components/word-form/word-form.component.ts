@@ -9,6 +9,7 @@ import {Validators, FormBuilder, FormGroup} from '@angular/forms';
             novalidate
             [formGroup]="form">
         <input formControlName="word">
+        <select>
         <button
           type="submit"
           [disabled]="form.invalid">
@@ -24,7 +25,8 @@ export class WordFormComponent {
   change: EventEmitter<string> = new EventEmitter<string>();
 
   form: FormGroup = this.formBuilder.group({
-    word: ['', Validators.required]
+    word: ['', Validators.required],
+    method: ''
   });
 
   constructor(private formBuilder: FormBuilder) {
