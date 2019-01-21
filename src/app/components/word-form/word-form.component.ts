@@ -4,25 +4,17 @@ import {Validators, FormBuilder, FormGroup} from '@angular/forms';
 @Component({
   selector: 'app-word-form',
   template: `
-    <div class="row">
-      <div class="col-sm-6 offset-sm-3">
-        <form (ngSubmit)="onSubmit()"
-              novalidate
-              [formGroup]="form">
-          <div class="input-group mb-3">
-            <input formControlName="word" class="form-control">
-            <div class="input-group-append">
-              <button
-                type="submit"
-                class="btn btn-default"
-                [disabled]="form.invalid">
-                Let's knit!
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>`,
+        <form class="form-inline" (ngSubmit)="onSubmit()"
+            novalidate
+            [formGroup]="form">
+          <input formControlName="word" class="form-control mr-sm-2">
+          <button
+            type="submit"
+            class="btn btn-default"
+            [disabled]="form.invalid">
+            Let's knit!
+          </button>
+        </form>`,
   styleUrls: ['./word-form.component.css']
 })
 export class WordFormComponent {
