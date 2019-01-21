@@ -5,16 +5,23 @@ import {Validators, FormBuilder, FormGroup} from '@angular/forms';
   selector: 'app-word-form',
   template: `
     <div class="row">
-      <form (ngSubmit)="onSubmit()"
-            novalidate
-            [formGroup]="form">
-        <input formControlName="word">
-        <button
-          type="submit"
-          [disabled]="form.invalid">
-          Let's knit!
-        </button>
-      </form>
+      <div class="col-sm-6 offset-sm-3">
+        <form (ngSubmit)="onSubmit()"
+              novalidate
+              [formGroup]="form">
+          <div class="input-group mb-3">
+            <input formControlName="word" class="form-control">
+            <div class="input-group-append">
+              <button
+                type="submit"
+                class="btn btn-default"
+                [disabled]="form.invalid">
+                Let's knit!
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>`,
   styleUrls: ['./word-form.component.css']
 })

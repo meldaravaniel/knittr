@@ -9,18 +9,24 @@ import {BASES} from './constants/constants';
         <div class="navbar-header">
           <span class="navbar-brand" href="#">Knittr</span>
         </div>
+        <div id="navbar" class="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://www.instagram.com/knitpurlspin">ig</a></li>
+            <li><a href="http://www.ravelry.com/people/knitpurlspin">rav</a></li>
+            <li><a href="http://www.github.com/meldaravaniel">git</a></li>
+            <li><a href="http://www.ko-fi.com/amygleixner">ko-fi</a></li>
+            <li><a href="http://www.paypal.me/amygleixner">paypal</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <div class="container">
+      <app-word-form (change)="wordChanged($event)"></app-word-form>
       <div class="row">
         <div class="col-sm-4">
-        Am I bootstrapped yet?
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <app-word-form (change)="wordChanged($event)"></app-word-form>
           <app-word-encoding [word]="word" (change)="encodingsChanged($event)"></app-word-encoding>
+        </div>
+        <div class="col-sm-8">
           <app-pattern [encodings]="encodings"></app-pattern>
         </div>
       </div>
