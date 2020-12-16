@@ -8,15 +8,15 @@ Baby steps. :3
 
 # Release Notes
 
-## [Current Release](https://meldaravaniel.github.io/knittr)
+## [Current Release](https://meldaravaniel.github.io/knittr): 0.5
 
-* fixes the show/hide padding bug...weirdly, but fixed...
-
-### Release 0.4
 * upgrades Angular-CLI to 11.0.4
 * upgraded all supporting dependencies to match either latest available, or that required by Angular
 * installed newly-required dependencies for Angular
 * uninstalled deprecated or obsolete dependencies, where applicable
+
+### Release 0.4
+* fixes the show/hide padding bug...weirdly, but fixed...
 
 ### Release 0.3
 * adds grid and grid-sizing to the page to map the pattern
