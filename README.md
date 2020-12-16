@@ -41,7 +41,7 @@ Baby steps. :3
 - [X] The Grid *cue Daft Punk*, but all out in one long line, representing the stitches
 - [X] pad the grid with blank stitches if they don't evenly divide into the area of the grid.
 - [X] provide 2D grid configurations of N stitches wide and as many tall as need be to accommodate all the stitches ~~(start with just an add/remove column clicky thing?)~~
-- [ ] upgrade to latest angular
+- [X] upgrade to latest angular
 - [ ] bug: first time you click "use leading zeroes" the grids don't respond.  Have to click/unclick to make it work.
 - [ ] add some css to make it prettier (ng-material?)
 - [ ] validate extraneous input (only allow English alpha characters for now.
