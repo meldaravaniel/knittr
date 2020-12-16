@@ -12,6 +12,12 @@ Baby steps. :3
 
 * fixes the show/hide padding bug...weirdly, but fixed...
 
+### Release 0.4
+* upgrades Angular-CLI to 11.0.4
+* upgraded all supporting dependencies to match either latest available, or that required by Angular
+* installed newly-required dependencies for Angular
+* uninstalled deprecated or obsolete dependencies, where applicable
+
 ### Release 0.3
 * adds grid and grid-sizing to the page to map the pattern
 * user can select how many columns are shown for each base
@@ -67,13 +73,13 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Production Build to Gh Pages
 
-Need to have installed gh-pages: `npm install -g gh-pages`
-Build it: `ng build --prod --base-href ""` 
-Deploy the dist folder `ng build --prod` created to gh-pages: `gh-pages -d dist`
+* Need to have installed gh-pages: `npm install -g gh-pages`
+* Build it: `ng build --prod --base-href ""` 
+* Deploy the dist folder that created to gh-pages: `gh-pages -d dist`
 
 ## Running unit tests
 
