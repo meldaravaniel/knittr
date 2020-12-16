@@ -80,6 +80,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 * Need to have installed gh-pages: `npm install -g gh-pages`
 * Build it: `ng build --prod --base-href ""` 
 * Deploy the dist folder that created to gh-pages: `gh-pages -d dist`
+	* this step may require using [SSH keys](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) instead of HTTPS, as it doesn't prompt correctly for user/pass (and don't want to keep pass in plain text...)
 
 ## Running unit tests
 
