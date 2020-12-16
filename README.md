@@ -54,7 +54,7 @@ Baby steps. :3
 * recommended: [Node Version Manager](https://github.com/coreybutler/nvm-windows/releases) to manage node and npm versions quickly.
 ## Setting up a new Dev Environment
 
-Install the angular cli: `npm install -g @angular/cli@1.6.5`
+Install the angular cli: `npm install -g @angular/cli@11.0.4`
 Create the node modules: `npm install`
 
 ## Development server
